@@ -1,14 +1,22 @@
+.main-container{
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .main-start-page {
   /*background: url('./assets/bg.jpg') no-repeat;*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 100px);
   position: relative;
 }
-
-
 
 .box-ball{
   position: absolute;
@@ -16,7 +24,7 @@
   top:250px;
   width:200px;
   height: 250px;
-  background: url('assets/ball/1.png')  top left/200px 250px no-repeat ;
+  background: url('./assets/ball/1.png')  top left/200px 250px no-repeat ;
   z-index: -1;
   animation: ball 3s ease-in-out infinite 2s;
 }
@@ -70,6 +78,7 @@
 
 .start-button{
   cursor: pointer;
+  margin-bottom: 30px ;
 }
 
 .title-start-page {
@@ -83,16 +92,16 @@
 .footer {
   display: flex;
   justify-content: space-around;
-  max-height: 50px;
+  max-height: 70px;
   width: 100%;
-  padding: 15px;
+  padding: 15px 0;
   background-color: rgba(36, 197, 219, 0.15);
   color: white;
 }
 
 .route-box{
   position: relative;
-  max-height: 50px;
+  max-height: 70px;
   padding: 15px;
   margin-bottom: 20px;
   border: 2px solid #24C5DB;
@@ -125,7 +134,7 @@
   float: right;
   color: red;
   font-size: 24px;
-  line-height: 45px;
+  line-height: 50px;
   text-align: center;
-  background: url('assets/svg/ball.svg') no-repeat 0 0/cover;
+  background: url('./assets/svg/ball.svg') no-repeat 0 0/cover;
 }

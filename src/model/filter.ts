@@ -10,8 +10,10 @@ const defaultFilter: Record<string, Array<string>> = {
 export default class Filter {
   filterValues: Record<string, Array<string>>;
   toys: IToysData[];
+  selectedToys: IToysData[];
   constructor(toys: IToysData[]) {
     this.toys = toys;
+    this.selectedToys = [];
     this.loadFromLocalstorage();
   }
 
@@ -52,20 +54,30 @@ export default class Filter {
   }
 
   selectToy(num: string) {
+    //console.log(this.selectedToys);
     this.toys.map(item => {
       if (item['num'] == num) {
         item['selected'] = (item['selected'] == false);
-      }
+        if (this.selectedToys.findIndex(value => {
+          return value.num === num}) != -1) 
+        {const index = this.selectedToys.findIndex(value => {return value.num == num});
+          this.selectedToys.splice(index, 1);
+        } else {
+          this.selectedToys.push(item);
+         // console.log('selected', this.selectedToys);
+        }
+      //console.log(this.selectedToys.findIndex(value => { return value.num === num } ));
+      } 
     })
   }
 
-  countSelectedToys(): number {
-    let sum: number = 0;
-    this.toys.forEach((current) => {
-      if (current.selected == true) { sum++ }
-    })
-    return sum;
-  }
+  // countSelectedToys(): number {
+  //   let sum: number = 0;
+  //   this.toys.forEach((current) => {
+  //     if (current.selected == true) { sum++ }
+  //   })
+  //   return sum;
+  // }
 
   loadFromLocalstorage() {
     const storageData: string | null = localStorage.getItem('filter');
@@ -85,7 +97,7 @@ export default class Filter {
       'count': ['0', '12'],
       'year': ['1940', '2020'],
     }
-    console.log('filtervalues', this.filterValues);
+    //console.log('filtervalues', this.filterValues);
   }
 
   addFilterValue(type: string, value: string): void {

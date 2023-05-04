@@ -1,0 +1,139 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.tree-page{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-section, .toys-section{
+  width: 20%;
+  height: 100%;  
+  display: flex;
+  flex-direction: column;
+}
+
+.content-section{
+  position: relative;
+  width: 55%;
+  max-height: 500px;
+
+}
+
+.pictures-box, .toys-box, .settings-panel{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 5px;
+  margin: 20px;
+  width: 90%;
+  /*height: 100%;*/
+  background-color: rgb(15, 69, 77);
+  border: 2px solid #24C5DB;
+  color: white;
+  border-radius: 15px;
+}
+
+.toys-box{
+  position: relative;
+}
+
+.title-pictures-box, .title-settings-panel{
+  width: 100%;
+  margin: 5px 0 15px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.picture-icon{
+  
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.contaner-toy-count{
+  position: relative;
+}
+
+.count-toy{ 
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  /*padding: 2px;*/
+  text-align: center;
+  top: 8px;
+  left: 8px;
+  background-color: rgb(88, 197, 212);
+  border: 1px solid white ;
+  border-radius: 10px;
+}
+
+.picture-icon:hover, .icon-button:hover{
+  border: 2px solid rgb(88, 197, 212);
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+.canvas-box{
+  
+}
+
+.canvas{ 
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: 600px;
+  min-width: 550px;
+
+}
+
+/****settings-panel*******/
+.settings-panel{
+  column-gap: 30px;
+
+}
+.icon-button{
+  width: 30px;
+  height: 30px;
+  padding: 3px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.snowfall-button{
+  background: url('./assets/svg/snow.svg') 0 0/cover;
+}
+
+.audio-button{
+  background: url('./assets/svg/audio.svg') 0 0/cover;
+}
+
+.play{
+  background: url('./assets/svg/mute.svg') 0 0/cover;
+  /*border: 2px solid rgb(88, 197, 212);
+  transform: scale(1.1);*/
+}
+
+
+/*************snow***************/
+
+.snowflakes {
+	color: white;
+	position: absolute;
+	top: -20px;
+	animation: downfall cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@keyframes downfall {
+	to {
+		transform: translateY(100vh);
+	}
+}
