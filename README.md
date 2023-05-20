@@ -1,15 +1,10 @@
-# 🚀 Welcome to your new awesome project!
+# Game Christmas-tree
 
-This project has been created using **webpack-cli**, you can now run
+Welcome to my project! 
+My project is a web game written in TS. 
+In this game you choose the Christmas tree toys you like and decorate the tree! 
 
-```
-npm run build
-```
+# Usage
 
-or
-
-```
-yarn build
-```
-
-to bundle your application
+Deploy you can find there: [Play Christmas-tree!](https://ovalya.github.io/Christmas-tree/)
+Have a good time!
